@@ -43,9 +43,12 @@ template <class T>
 void _sort(T* arr, int size);
 template <class T>
 void _sort(T* arr, int size) {
-	for (int i = 0; i < size; ++i) {
-		for (int j = i; j > 0 and arr[j - 1] > arr[j]; --j) {
-			swap(arr[j - 1], arr[j]);
+
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (arr[j] > arr[j + 1]) {
+				swap(arr[j+1], arr[j]);
+			}
 		}
 	}
 	for (int i = 0; i < size; ++i)
